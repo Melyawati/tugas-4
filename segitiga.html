@@ -6,35 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segitiga</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="segitiga.css">
 
 </head>
 <body>
     <div class="container">
-        <h1>Hitung Luas</h1>
+        <h1 class="title">Hitung Luas</h1>
         <select class="form-select" aria-label="Default select example" onchange="location = this.value;">
             <option value="index.html">Pilih Bangun Ruang</option>
             <option  value="persegi.html">Persegi/Persegi Panjang</option>
             <option class="active" selected value="segitiga.html">Segitiga</option>
         </select>
 
-        <h1>Segitiga</h1>
-        <div class="container">
-            <div class="content">
-                <label class="title">Alas</label>
-                <input class="input" type="text" id="lebar">
-            </div>
-    
-            <div  class="content">
-                <label class="title">Tinggi</label>
-                <input class="input" type="text" id="panjang">
-    
-            </div>
-    
-            <button class="button" id="TxKlik">Hitung</button>
-    
-            <div  class="content">
-                <label class="title">Luas</label>
-                <input class="input" type="text" id="luas" class="form-control" placeholder="Luas" readonly="">
+        <div class="card content-wrapper">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="Alas" class="form-label content-title">Masukkan alas segitiga</label>
+                    <input class="form-control" type="text" id="alas" placeholder="Alas">
+                </div>
+        
+                <div class="mb-3">
+                    <label for="Tinggi" class="form-label content-title">Masukkan tinggi segitiga</label>
+                    <input class="form-control" type="text" id="tinggi" placeholder="Tinggi">
+        
+                </div>
+        
+                <button type="button" class="btn btn-primary" id="clickLuas">Hitung</button>
+        
+                <div  class="mb-3">
+                    <label class="form-label content-luas">Luas</label>
+                    <input class="form-control input-luas" type="text" id="luas" placeholder="Luas" readonly="">
+                </div>
             </div>
         </div>
     </div>
@@ -43,12 +45,12 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#panjang, #lebar").keyup(function() {
-            var panjang  = $("#panjang").val();
-            var lebar = $("#lebar").val();
+        $("#alas, #tinggi").keyup(function() {
+            var alas  = $("#alas").val();
+            var tinggi = $("#tinggi").val();
 
-            $( "#TxKlik" ).click(function() {
-                var luas = parseInt(panjang) * parseInt(lebar)/2;
+            $( "#clickLuas" ).click(function() {
+                var luas = parseInt(alas) * parseInt(tinggi)/2;
                 $("#luas").val(luas);
 	    	});
            

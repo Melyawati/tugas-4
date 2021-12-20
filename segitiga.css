@@ -1,0 +1,46 @@
+body{
+    background: #fff4f7;
+}
+
+.container {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card{
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%);
+    border: 1px solid #b4b4b4;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper{
+    margin: auto;
+    width: 45%;
+    margin-top: 8%;
+}
+
+.input-luas{
+    width: 40%;
+}
+
+.content-title{
+    margin-top: 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.content-luas{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
